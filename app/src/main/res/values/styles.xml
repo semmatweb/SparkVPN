@@ -1,0 +1,84 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:fontFamily">@font/sans_bold</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="android:statusBarColor">@color/background</item>
+
+
+
+
+
+
+
+
+        <item name="colorPrimary">@color/primary</item>   <!--AppListActivity's Material Switch uses this color as background when Switch is ON-->
+        <item name="colorSurfaceVariant">#1D2559</item>   <!--AppListActivity's Material Switch uses this color as background when Switch is OFF-->
+        <item name="colorOutline">#BFFFFFFF</item>        <!--AppListActivity's Material Switch uses this color as outline & round shape when Switch is OFF-->
+        <item name="colorOnPrimary">#BF000000</item>      <!--AppListActivity's Material Switch uses this color as round shape when Switch is ON-->
+
+
+
+
+
+
+
+       <!-- <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+        <item name="colorTertiary">@color/white</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/white</item>
+        <item name="colorOnTertiaryContainer">@color/white</item>
+        <item name="colorError">@color/white</item>
+        <item name="colorErrorContainer">@color/white</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorOnErrorContainer">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorSurfaceVariant">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+        <item name="colorOutline">@color/white</item>
+        <item name="colorOnSurfaceInverse">@color/white</item>
+        <item name="colorSurfaceInverse">@color/white</item>
+        <item name="colorPrimaryInverse">@color/white</item>-->
+
+
+
+
+
+
+
+
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/background</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+
+
+    <style name="SplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+    </style>
+
+
+
+
+
+</resources>

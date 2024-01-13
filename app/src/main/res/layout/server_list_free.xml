@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,UseCompoundDrawables"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/country_flag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_earth"
+        android:background="@drawable/curved_background"
+        android:scaleType="centerCrop"
+        />
+
+
+    <LinearLayout
+        android:layout_toEndOf="@+id/country_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/region_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_york_ny"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/pro"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/crown"
+                android:layout_marginStart="5dp"
+                android:visibility="visible" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_server_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_server_type"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/free_server"
+                android:textColor="@color/white"
+                android:alpha="0.5"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/region_limit"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/network"
+                android:visibility="visible"
+                />
+
+            <TextView
+                android:id="@+id/tv_latency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="69ms"
+                android:textColor="@color/white"
+                android:alpha="0.5"
+                android:textSize="12sp"
+                android:layout_marginStart="2dp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_text"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/curved_stroke"
+
+        />
+
+
+</RelativeLayout>

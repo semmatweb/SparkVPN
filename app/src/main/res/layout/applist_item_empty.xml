@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,UseCompoundDrawables"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:layout_marginBottom="20dp">
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/curved_background"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:layout_toEndOf="@+id/app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:background="#1f264e">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="2dp"
+            android:background="#1f264e">
+        </ImageView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/curved_background"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        />
+</RelativeLayout>

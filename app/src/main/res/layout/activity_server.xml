@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activities.ServerActivity">
+    <include
+        android:id="@+id/tool_bar_faq"
+        layout="@layout/app_toolbar"
+        android:visibility="visible" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_below="@+id/tool_bar_faq"
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_auto_start="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/regions_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+                <include layout="@layout/server_list_empty"/>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

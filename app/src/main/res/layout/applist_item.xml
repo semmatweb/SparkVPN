@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,UseCompoundDrawables"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/bypass_list_message"
+        android:layout_marginBottom="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/app_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/chrome"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        />
+
+
+    <LinearLayout
+        android:layout_toEndOf="@+id/app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/mSwitch">
+        >
+
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chrome"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/app_package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="com.android.chrome"
+                android:textColor="@color/white"
+                android:alpha="0.5"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/mSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.semmatsolutions.sparkvpn'
+    compileSdkVersion 33
+    buildFeatures {
+        buildConfig = true
+    }
+    defaultConfig {
+        applicationId "com.semmatsolutions.sparkvpn"
+        minSdkVersion 28
+        targetSdkVersion 33
+        versionCode 14
+        versionName "1.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+
+
+        buildConfigField "Boolean", "USE_ONESIGNAL", "true"
+        buildConfigField "String", "ONESIGNAL_APP_ID", "\"16348a19-836d-4110-92ba-4057272a137b\""
+
+        buildConfigField "String", "ENVATO_PURCHASE_CODE", "\"86781236-23d0-4b3c-7rya-c1c147e0eiok\""
+
+        buildConfigField "String", "SHARED_PREFS", "\"BYCOM_SHAREDPREFS\""
+        buildConfigField "String", "PREFERENCE_KEY_EXCLUDED_LIST", "\"APPLIST_EXCLUDED\""
+
+        buildConfigField "Boolean", "USE_IN_APP_PURCHASE", "true"
+        buildConfigField "String", "IN_APPKEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs1+MhNbvRXPufL3+tUYcAXUErJoZuce7mCQ7326cGKNZ9UtlB47DcLB0sBW6z+fqXd10eVP3U9MXyrI1qb5X8jevQ+WfDaZ7oyQH21AgagYLaQ4QsygsZ9P/DGTKudlZSNhFfN9hueTv0DMsK0GmGCq03uRo/ZZaBheKY0v4Op4yZ0VKiFHMsvff2fcgQHEBYrZ8eEA9GP2cV1qKdXg6asC68Uv9DXY5S/LjDMiBOZ7IYqAuWsktZUuuSQfWUiJP2qj//z2orxDt6rviPikp3+OlSwCV+2Vvnpft2WOCiXZJ0niD6h5GG4Qfy/SRyBFMZxBLExwgp3hDiHoT6PIufwIDAQAB\""
+        buildConfigField "String", "MONTHLY", "\"1month_sub\""
+        buildConfigField "String", "SIX_MONTH", "\"6month_sub\""
+        buildConfigField "String", "YEARLY", "\"1year_sub\""
+
+        buildConfigField "Boolean", "GOOGlE_AD", "true"
+        buildConfigField "String", "GOOGLE_BANNER", "\"ca-app-pub-3940256099942544/6300978111\""
+        buildConfigField "String", "GOOGLE_INTERSTITIAL", "\"ca-app-pub-3940256099942544/1033173712\""
+
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
+    implementation 'com.github.AnchorFreePartner.hydra-sdk-android:sdk:4.2.2'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.onesignal:OneSignal:4.8.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation "androidx.core:core-splashscreen:1.0.1"
+    implementation 'androidx.browser:browser:1.5.0'
+    implementation 'com.github.akshaaatt:Google-IAP:1.2.2'
+    implementation 'com.google.ads.mediation:facebook:6.14.0.0'
+    implementation 'com.google.android.gms:play-services-ads:22.1.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0'
+}
+

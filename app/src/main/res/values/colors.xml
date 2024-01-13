@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#141a3d</color>
+    <color name="primary">#687FFF</color>
+    <color name="primary_light">#CDD4FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_blue">#3af3ff</color>
+    <color name="speed_test_graph">#687fff</color>
+
+
+</resources>

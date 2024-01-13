@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_speeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="25sp"
+        android:layout_marginEnd="25sp">
+
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/downloadShimmer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            app:shimmer_auto_start="false"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_blue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_download_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/spline_sans_mono_bold"
+                    android:alpha="0.8"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mbps"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:alpha="0.5"
+                    />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/svg_download_upload"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/uploadShimmer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            app:shimmer_auto_start="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_blue"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_upload_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/spline_sans_mono_bold"
+                    android:alpha="0.8"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mbps"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:alpha="0.5"
+                    />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </LinearLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/pingShimmer"
+        android:layout_below="@+id/ll_speeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:shimmer_base_alpha="1"
+        app:shimmer_highlight_alpha="0.5"
+        app:shimmer_auto_start="false"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:alpha="0.5"
+            >
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/transfer"
+                app:tint="@color/white"
+                android:layout_gravity="center_vertical"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_ping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connection Ping: - ms"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/serverShimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:shimmer_auto_start="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Finding Optimal Server"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/speed_test" />
+
+
+
+
+        <View
+            android:id="@+id/centre"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="@font/spline_sans_mono_bold"
+            android:alpha="0.8"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/centre"
+            android:layout_marginTop="50dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mbps"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:alpha="0.5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_speed"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_speed_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/bar" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="Begin Test"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        />
+
+</RelativeLayout>
+

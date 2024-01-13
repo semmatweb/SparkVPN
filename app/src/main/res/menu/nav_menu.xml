@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_speed_test"
+            android:title="Speed Test"
+            android:icon="@drawable/speedometer" />
+        <item
+            android:id="@+id/menu_excluded_apps"
+            android:title="Bypass Apps"
+            android:icon="@drawable/block" />
+        <item
+            android:id="@+id/menu_about"
+            android:title="About"
+            android:icon="@drawable/about" />
+        <!-- Add more menu items as needed -->
+    </group>
+</menu>
